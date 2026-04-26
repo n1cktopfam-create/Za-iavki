@@ -3,49 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Разработка сайтов под заказ | Portfolio</title>
+    <title>Premium Web Design</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-        }
-
         body {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
-                        url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=2070&auto=format&fit=crop');
+            /* Фоновая картинка с крутой машиной */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=1000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: white;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        .hero {
-            height: 100vh;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 20px;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 40px;
+        .card {
+            background: rgba(255, 255, 255, 0.1); /* Эффект стекла */
+            backdrop-filter: blur(10px);
+            padding: 30px;
             border-radius: 20px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
         }
 
-        h1 { font-size: 2.8rem; margin-bottom: 15px; color: #00d4ff; letter-spacing: 2px; }
-        p { margin-bottom: 25px; font-size: 1.1rem; opacity: 0.9; }
+        h1 { color: #00ffaa; margin-bottom: 5px; }
+        p { color: #ccc; margin-bottom: 25px; }
 
         input, textarea {
             width: 100%;
@@ -53,9 +42,9 @@
             margin-bottom: 15px;
             border-radius: 10px;
             border: none;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
             color: white;
-            outline: none;
+            box-sizing: border-box; /* Чтобы не вылазило за края */
         }
 
         button {
@@ -63,91 +52,30 @@
             padding: 15px;
             border-radius: 10px;
             border: none;
-            background: #00d4ff;
+            background: linear-gradient(45deg, #00ffaa, #00d4ff);
             color: #000;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 16px;
             cursor: pointer;
             transition: 0.3s;
         }
 
-        button:hover { background: #0099cc; transform: scale(1.02); }
-
-        .content-section {
-            padding: 100px 20px;
-            background: rgba(10, 10, 10, 0.95);
-            text-align: center;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #00d4ff;
-            text-transform: uppercase;
-        }
-
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto 60px;
-            font-size: 1.25rem;
-            color: #ccc;
-        }
-
-        .reviews-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .review-card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 30px;
-            border-radius: 15px;
-            width: 320px;
-            border-top: 2px solid #00d4ff;
-            text-align: left;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-
-        .client-name {
-            display: block;
-            margin-top: 20px;
-            color: #00d4ff;
-            font-weight: 600;
-        }
-
-        footer {
-            padding: 30px;
-            text-align: center;
-            background: #050505;
-            color: #555;
-            font-size: 0.85rem;
-        }
+        button:active { transform: scale(0.95); }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="glass-card">
-            <h1>Za-iavki</h1>
-            <p>Профессиональная разработка современных сайтов и лендингов для вашего бизнеса.</p>
-            
-            <form action="https://formspree.io/f/ВАШ_ID" method="POST">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Email или Телефон" required>
-                <textarea name="message" rows="3" placeholder="Опишите вашу задачу..."></textarea>
-                <button type="submit">Связаться со мной</button>
-            </form>
-        </div>
-    </section>
+    <div class="card">
+        <h1>Создание Сайтов</h1>
+        <p>Премиальный дизайн и работающие формы</p>
 
-    <section id="about" class="content-section">
-        <h2 class="section-title">Обо мне</h2>
-        <p class="about-text">
-            Специализируюсь на создании быстрых и адаптивных веб-решений. 
-            Помогаю превратить идею в работающий инструмент для привлечения клиентов. 
-            Каждый проект — это индивидуальный подход и внимание к деталям.
-        </p>
+        <form action="https://formspree.io/f/myklveeg" method="POST">
+            <input type="text" name="name" placeholder="Как вас зовут?" required>
+            <input type="email" name="email" placeholder="Ваш Email" required>
+            <textarea name="message" placeholder="Какой проект обсудим?" rows="3"></textarea>
+            <button type="submit">ЗАКАЗАТЬ САЙТ</button>
+        </form>
+    </div>
 
-        <h2 class="section-title">Отзывы клиентов ⭐
+</body>
+</html>
